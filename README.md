@@ -68,6 +68,15 @@ ErrorDocument 431 ~/Web-error/error/431.html
 ErrorDocument 451 ~/Web-error/error/451.html
 ErrorDocument 500 ~/Web-error/error/500.html
 ```
+そしたら
+```
+apache2ctl configtest
+Syntax OK
+```
+これでSyntaxOKだったら
+```
+systemctl restart apache2
+```
 ★お★わ★り★
 # 番番外外編編 - ボツのページ
 ま、また？僕仕事あるんですけど・・・まあいいや。
