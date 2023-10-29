@@ -1,15 +1,6 @@
 # 説明
 404, 500, 403などのエラーの画面を簡単に実装！
 インストール方法は一番下にあります。
-# 設定方法
-以下の文をhtaccessに貼り付けてください。
-```
-
-```
-または、apacheのconfigファイル(apache2.conf または httpd.conf)に貼り付けてください。
-# Apacheのconfigファイルに貼り付ける場合
-apacheのconfigファイルが有る場所にWeb-errorをインストールしてください。
-
 # ダウンロード
 ```
 su
@@ -23,14 +14,13 @@ ls
 rm -rd .git
 rm -rf README.md
 ```
-そうしたら好きなエディタで.htaccessを編集してください
+そうしたら好きなエディタで.htaccessを編集してください(Apache![apache](https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://httpd.apache.org&size=16)のconfigでも可だが末尾を参照)
 ```
 nano .htaccess
 ```
 できたらカタカタしてｯﾀｰｰﾝ!!!
 ```
 ErrorDocument 404 ./Web-error/error/404.html
-ErrorDocument 418 ./Web-error/error/418.html
 ErrorDocument 400 ./Web-error/error/400.html
 ErrorDocument 401 ./Web-error/error/401.html
 ErrorDocument 402 ./Web-error/error/402.html
@@ -49,3 +39,18 @@ ErrorDocument 451 ./Web-error/error/451.html
 ErrorDocument 500 ./Web-error/error/500.html
 ```
 これで保存すればOKです。お疲れさまでした
+# 番外編 - ![apache](https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://httpd.apache.org&size=16)のconfigをいじいじする -
+また会いましたね。では紹介します。
+![apache](https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://httpd.apache.org&size=16)のconfigをいじいじする場合、apacheのコンフィグの配置場所にこれをインストールして、上のErrorDocumentsから始まるコードを末尾にペーストすれば大丈夫です。
+それでは、今度こそさようなら。
+# 番番外外編編 - ボツのページ
+ま、また？僕仕事あるんですけど・・・まあいいや。
+実はこのプロジェクトボツのページがあります。<small>しかも開けますし入ってます。</small>
+その名も「418.html」～～！
+え？そのステータスコードはあるって？
+
+
+...
+君のような勘のいいガキは嫌いだよ
+
+まあ、apache2ctl configtestするとエラーが出るから無効化しただけです(htaccessのコピペ欄にないでしょ？)。
