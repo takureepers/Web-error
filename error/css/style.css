@@ -1,0 +1,27 @@
+body{
+    background-color: #84a2d4; /* 青藤色 https://www.colordic.org/colorsample/2453*/
+}
+.border p{
+    color: white;
+}
+.border{
+    border: thick double whitesmoke;
+    border-radius: 8px;
+}
+.bigger{
+    font-size: 45px; font-weight: bold;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.result{
+    background-color: white;
+}
+li{
+    list-style-type: square;
+}
+.rtrn{
+    display: inline-block;
+    white-space: nowrap;
+}
