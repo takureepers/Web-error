@@ -2,7 +2,32 @@
 404, 500, 403などのエラーの画面を簡単に実装！
 インストール方法は一番下にあります。
 # 設定方法
-以下の文をhtacsessに貼り付けてください。
+以下の文をhtaccessに貼り付けてください。
+```
+
+```
+または、apacheのconfigファイル(apache2.conf または httpd.conf)に貼り付けてください。
+# Apacheのconfigファイルに貼り付ける場合
+apacheのconfigファイルが有る場所にWeb-errorをインストールしてください。
+
+# ダウンロード
+```
+su
+git clone https://github.com/takureepers/Web-error.git
+cd Web-error/error
+ls
+```
+ここでファイルが存在することを確認してください。
+できたら、下の文を打ってください。
+```
+rm -rd .git
+rm -rf README.md
+```
+そうしたら好きなエディタで.htaccessを編集してください
+```
+nano .htaccess
+```
+できたらカタカタしてｯﾀｰｰﾝ!!!
 ```
 ErrorDocument 404 ./Web-error/error/404.html
 ErrorDocument 418 ./Web-error/error/418.html
@@ -23,13 +48,4 @@ ErrorDocument 431 ./Web-error/error/431.html
 ErrorDocument 451 ./Web-error/error/451.html
 ErrorDocument 500 ./Web-error/error/500.html
 ```
-または、apacheのconfigファイル(apache2.conf または httpd.conf)に貼り付けてください。
-# apacheのconfigファイルに貼り付ける場合
-apacheのconfigファイルが有る場所にWeb-errorをインストールしてください。
-# ダウンロード
-```
-git clone https://github.com/takureepers/Web-error.git
-cd Web-error/error
-ls
-```
-ここでファイルが存在することを確認してください。
+これで保存すればOKです。お疲れさまでした
